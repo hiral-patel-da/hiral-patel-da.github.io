@@ -14,7 +14,7 @@ Skills
 * Microsoft Excel
   * Basic functions and formulas, Advanced functions, Pivot tables, Data validation, Data cleaning and preparation, Conditional formating, Charts and graphs, Dashboard creation, statistical analysis.
 * SQL - Structured Query Language
-  * Basic queries, Joins, Aggregate functions, filtering and sorting, Subqueries, Data manipulation, Data transformation, windows functions, conditional logic, aggregate filtering, temporal Queries, Statistical analysis. 
+  * Basic queries, Joins, Aggregate functions, Filtering and sorting, Subqueries, Data manipulation, Data transformation, windows functions, conditional logic, aggregate filtering, temporal Queries, Statistical analysis. 
 * Tableau
   * Data Connection and Integration, Data Preparation, Building Visualization, Dashboard Creation, Advanced Calculation, Mapping, Data BLending, Storytelling, Data Security, tableau Server and Tableau Online, KPI Tracking.
 * Management Skills
@@ -25,7 +25,7 @@ Skills
 Work experience
 ======
 * Sept 2020 - Present: Hospitality Manager, Embers Inn 
-  * Managed staffing levels for busy periods and special events to ensudre smooth operations.
+  * Managed staffing levels for busy periods and special events to ensure smooth operations.
   * Cultivated loyal clientele through personalized service and oversaw front desk operations during peak hours.
   * Analyzed occupancy, revenue, expenses and guest feedback to drive operational improvements.
   * Conducted audits of accounts focusing on data analysis to ensure accuracy and identify areas for optimization. 
@@ -56,4 +56,4 @@ Certifications
 Service and leadership
 ======
   * Hospitality Managemnent, customer service - (2020 - Present)
-  * Support Services - assistanse to individual facing challenges (2021- 2023) 
+  * Support Services - Assistanse to individual facing challenges (2021- 2023) 
