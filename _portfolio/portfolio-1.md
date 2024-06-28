@@ -8,6 +8,7 @@ To gather and analyze salary information from around the world for jobs in Artif
 
 Tasks - 
 * Clean and Prepare data - 
+
     1) select all the field and remove duplicates found in the data.
 
 
@@ -28,14 +29,15 @@ Tasks -
 
     4) Share your findings in reports or online so everyone can use them to understand salary trends in these fields.
 
-* Findings
+* Findings -
+
     1) Distribution of Top 10 Job titles
 
     2) Salary by Employment type
 
     3) Salary vs Employee Residence
 
-    4) Top 10 COuntries Data Science Employees lives in
+    4) Top 10 Countries Data Science Employees lives in
 
     5) Distribution of Data Science job by company location
 
@@ -48,7 +50,7 @@ Tasks -
     9) How have salaries in the AI, ML, and Data fields changed from 2020 to 2023?
 
     10) Are there any significant differences in salary trends between different industries or company sizes?
-    
+
     11) What is the impact of remote work on salary in the AI, ML, and Data fields?
 
 
