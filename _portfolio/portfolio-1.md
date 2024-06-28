@@ -43,15 +43,12 @@ Tasks -
 
     6) Top 5 Highest salary by Job title
 
-    7) What are the most common job titles and employment types in the AI, ML, and Data fields?
+    7) Most common job titles and Employment types Data fields
 
-    8) How does experience level and employment type affect salary in the AI, ML, and Data fields?
+    8) Experience level and Employment type affecting salary in Job Position
 
-    9) How have salaries in the AI, ML, and Data fields changed from 2020 to 2023?
+    9) How have salaries in Job Position changed overtime (2020-2024)
 
-    10) Are there any significant differences in salary trends between different industries or company sizes?
+    10) Differences in salary trends between different Company Location or company sizes
 
-    11) What is the impact of remote work on salary in the AI, ML, and Data fields?
-
-
-
+    11) The impact of remote work on salary in Job Position
