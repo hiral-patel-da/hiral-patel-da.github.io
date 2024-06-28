@@ -30,15 +30,25 @@ Tasks -
 
 * Findings
     1) Distribution of Top 10 Job titles
+
     2) Salary by Employment type
+
     3) Salary vs Employee Residence
+
     4) Top 10 COuntries Data Science Employees lives in
+
     5) Distribution of Data Science job by company location
+
     6) Top 5 Highest salary by Job title
+
     7) What are the most common job titles and employment types in the AI, ML, and Data fields?
+
     8) How does experience level and employment type affect salary in the AI, ML, and Data fields?
+
     9) How have salaries in the AI, ML, and Data fields changed from 2020 to 2023?
+
     10) Are there any significant differences in salary trends between different industries or company sizes?
+    
     11) What is the impact of remote work on salary in the AI, ML, and Data fields?
 
 
