@@ -1,5 +1,5 @@
 ---
-title: "Global, AI, ML, and Data science salaries"
+title: "Data science job salary analysis"
 excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
@@ -29,7 +29,7 @@ Tasks -
 
     4) Share your findings in reports or online so everyone can use them to understand salary trends in these fields.
 
-* Findings -
+* Findings (Excel & SQL) - 
 
     1) Distribution of Top 10 Job titles
 
@@ -52,3 +52,32 @@ Tasks -
     10) Differences in salary trends between different Company Location or company sizes
 
     11) The impact of remote work on salary in Job Position
+
+
+* Exploratory Data Analysis (Tableau)
+
+    1) Distribution of experience level
+
+    2) Distribution of work type
+
+    3) Distribution of company size
+
+    4) Median salary vs experience level
+
+    5) Median salary vs employment type
+
+    6) Median Salry vs experience level based on company size
+
+    7) Mean and median salary across the world
+
+    8) Median salary based on experience level
+
+    9) Top 5 jobs based on median salary
+
+    10) Top 10 job titles
+
+    11) Company location based on count of job titles
+
+    12) Mean salary as a function of Currency
+
+    13) Mean Salary as a function of company location.
