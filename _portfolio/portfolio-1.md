@@ -12,7 +12,7 @@ Tasks -
     1) select all the field and remove duplicates found in the data.
 
 
-    2) To better understand the data, let's replace the data for experience_level, employment_type, company_size. (Make sure other columns doesn't get change)
+    2) To better understand the readability, let's improve the column names for experience_level, employment_type, company_size. (Make sure other columns doesn't get change)
 
 
     3) Format salary_in_usd column by adding comma and zero decimal place.
@@ -66,7 +66,7 @@ Tasks -
 
     5) Median salary vs employment type
 
-    6) Median Salry vs experience level based on company size
+    6) Median Salary vs experience level based on company size
 
     7) Mean and median salary across the world
 
