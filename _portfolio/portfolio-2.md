@@ -26,6 +26,11 @@ Findings
  
     - For splitting address components into separate columns, I found column "PropertyAdrress" and Column "OwnerAddress" has Address, city, and state in one column seperated with a ` delimeter (,) comma`.
 
+    - For converting "Y" and "N" to "Yes" and "No" in the "sold as vacant" column, I found that "Sold as vacant" column has "Y" and "N" as data and thought to make the data more meaningful. 
+
+    - For removing duplicates, I found that dataset has repeated columns which slow down the query process and occupy storage space. 
+
+
 
 
 Solution
@@ -37,4 +42,10 @@ Solution
 
     - For filling in missing property address, First, I tried understanding where these missing values are located by listing all data and ordering it by "ParcelID". Then, I found other records "(b)" that have valid "PropertyAddress" values for the same "ParcelID", which can be used to fill in the missing ones in records "(a)" where "PropertyAddress" is null with `ISNULL` syntax. Finally, in the third query I updated the dataset by actually replacing the null "PropertyAddress" values in records "(a)" with the corresponding values from records "(b)". 
 
-    - For splitting address components into separate columns, I used string functions like `SUBSTRING` syntax returns the substring from the "PropertyAddress" as per the position returned by the `CHARINDEX`, Then I used `CHARINDEX` to return the substring position of delimeter from the "PropertyAddress", Then I used `LEN` syntax to calculate the length of column "PropertyAddress" and finally I altered the table and update the table and repedted the same steps for the column "OwnerAddress"
+    - For splitting address components into separate columns, I used string functions like `SUBSTRING` syntax returns the substring from the "PropertyAddress" as per the position returned by the `CHARINDEX`, Then I used `CHARINDEX` to return the substring position of delimeter from the "PropertyAddress", Then I used `LEN` syntax to calculate the length of column "PropertyAddress" and finally I altered the table and update the table and repeated the same steps for the column "OwnerAddress".
+
+    - For converting "Y" and "N" to "Yes" and "No" in the "sold as vacant" column, I used `CASE STATEMENT` to replace "Y" to "Yes" and "N" to "No" to make data more clear anf meaningful.
+
+    - For removing duplicates, I created a `COMMON TABLE EXPRESSION` and gave a `ROW NUMBER` to dataset to figure out how many duplicates are there by using `PARTITION BY` and selecting each columns. After `CTE` is created select all column and use `WHERE` syntax to figure `ROW NUMBER` greater than 1. and remove them using `DELETE` syntax.  
+
+    -
