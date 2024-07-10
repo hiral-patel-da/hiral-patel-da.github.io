@@ -30,9 +30,6 @@ Findings
 
     - For removing duplicates, I found that dataset has repeated columns which slow down the query process and occupy storage space. 
 
-
-
-
 Solution
 =====
 
@@ -47,5 +44,3 @@ Solution
     - For converting "Y" and "N" to "Yes" and "No" in the "sold as vacant" column, I used `CASE STATEMENT` to replace "Y" to "Yes" and "N" to "No" to make data more clear anf meaningful.
 
     - For removing duplicates, I created a `COMMON TABLE EXPRESSION` and gave a `ROW NUMBER` to dataset to figure out how many duplicates are there by using `PARTITION BY` and selecting each columns. After `CTE` is created select all column and use `WHERE` syntax to figure `ROW NUMBER` greater than 1. and remove them using `DELETE` syntax.  
-
-    -
