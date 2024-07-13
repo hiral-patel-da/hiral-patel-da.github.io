@@ -3,22 +3,23 @@ title: "Data Cleaning in SQL"
 excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
+
 Project Goal
 =====
 
-In this project we take the raw housing data (Nashville housing data) and transform it in SQL server to make it more usable and increase readability of the data for analysis. 
+In this project, our goal is to refine the raw Nashville housing data using SQL Server. By transforming the data, we aim to enhance its usability and improve its readability, thereby facilitating more insightful analysis.
 
 Objective
 =====
 
-*  In this project, I worked with Nashville housing data where I cleaned the data and make it more precise and increase its readability for analysis.
+* In this project, I focused on Nashville housing data, refining it through meticulous cleaning to enhance precision and readability, thus optimizing it for detailed analysis.
 
     - I meticulously cleaned and formatted the raw data using SQL. This included tasks such as standardizing date formats, filling in missing property addresses, splitting address components into separate columns for clarity, converting "Y" and "N" to "Yes" and "No" in the "sold as vacant" column for easier interpretation, removing duplicates to save storage space and improve query speed, and deleting unused columns to streamline query performance. Through these thorough data cleaning steps, I ensured the dataset was accurate and reliable. This allows me to analyze the data confidently, knowing the results will be both meaningful and precise.
 
 Findings
 =====
 
-*   From the Nashville housing data I found some of data needs to meaningful and cleaned.
+*   In reviewing the Nashville housing data, I've identified areas where the data could benefit from clarification and refinement to ensure its relevance and accuracy.
 
     - For standardizing date format, I found that column "SaleDate" is in `DATETIME` format where time is of no use.
 
