@@ -53,73 +53,73 @@ Findings and Solution
 
 - Findings for Objective 2: Data Exploration
 
-    1) Distribution of Top 10 Job Titles
+    1. Distribution of Top 10 Job Titles
 
         * The top 10 job titles in AI, ML, and data science roles include positions such as Data Scientist, Machine Learning Engineer, and AI Researcher, with Data Scientist being the most prevalent.
 
-    2) Salary by Employment Type
+    2. Salary by Employment Type
 
         * Full-time positions generally command higher salaries compared to part-time and contract roles in AI, ML, and data science fields.
 
-    3) Salary vs Employee Residence
+    3. Salary vs Employee Residence
 
         * Employees residing in major tech hubs like United states, Canada, United Kingdom tend to earn higher salaries compared to those in smaller cities or rural areas.
 
-    4) Top 10 Countries Data Science Employees Live In
+    4. Top 10 Countries Data Science Employees Live In
 
         * Data science professionals are predominantly located in the United States, India, and the United Kingdom, reflecting global centers for tech and data-driven industries.
 
-    5) Distribution of Data Science Jobs by Company Location
+    5. Distribution of Data Science Jobs by Company Location
 
         * Data science jobs are concentrated in cities with established tech industries, such as United states, United kingdom  and Canada, indicating regional clusters of opportunities.
 
-    6) Top 5 Highest Salary by Job Title
+    6. Top 5 Highest Salary by Job Title
 
         * Roles like Data Scientist, Data Engineer, Data Analyst, Machine Learning Engineer and Analytics Engineer consistently offer the highest salaries in the field.
 
-    7) Most Common Job Titles and Employment Types
+    7. Most Common Job Titles and Employment Types
 
         * Data Scientist and Machine Learning Engineer are among the most common job titles, predominantly found in full-time employment.
 
-    8) Impact of Experience Level and Employment Type on Salary
+    8. Impact of Experience Level and Employment Type on Salary
 
         * Experience level significantly influences salary, with senior-level positions commanding higher compensation, particularly in full-time roles compared to part-time or contract positions.
 
-    9) Salary Changes Over Time (2020-2024)
+    9. Salary Changes Over Time (2020-2024)
 
         * Salaries in AI, ML, and data science have shown a steady increase from 2020 to 2024, driven by growing demand and technological advancements.
 
-    10) Differences in Salary Trends Between Company Locations or Sizes
+    10. Differences in Salary Trends Between Company Locations or Sizes
 
         * Companies based in high-cost-of-living areas or large corporations generally offer higher salaries compared to startups or companies in lower-cost regions.
 
-    11) Impact of Remote Work on Salary
+    11. Impact of Remote Work on Salary
 
         * Remote work has led to a shift in salary dynamics, with some professionals earning higher salaries due to global talent competition and others seeing adjustments based on local market conditions.
 
 * Exploratory Data Analysis (Tableau)
 
-   1) Distribution of Experience Level
+   1. Distribution of Experience Level
 
         - The distribution of experience levels among AI, ML, and data science professionals shows that 8.28% are entry-level (<2 years), 25.99% are mid-level (2-5 years), and 62.98% are senior-level (>5 years).
 
-    2) Distribution of Work Type
+    2. Distribution of Work Type
 
         - The distribution of work types reveals that 99.58% of professionals work full-time, 0.20% work part-time, 0.15% work on a contract basis, and 0.07% are freelancers or consultants.
 
-    3) Distribution of Company Size
+    3. Distribution of Company Size
 
         - In terms of company size, 0.98% of professionals work in startups, 93.27% in medium-sized companies, and 5.75% in large corporations.
 
-    4) Median Salary vs Experience Level
+    4. Median Salary vs Experience Level
 
         - The median salary increases with experience level: entry-level professionals earn approximately $80,000 mid-level professionals earn $1,10,707.5 senior-level professionals earn $1,52,500 and Executive-level professionals earn $1,96,000.
 
-    5) Median Salary vs Employment Type
+    5. Median Salary vs Employment Type
 
         - Median salaries vary by employment type: full-time employees earn $1,33,275 part-time employees earn $58,400 contract workers earn $93,856 and freelancers/consultants earn $36,007.
 
-    6) Median Salary vs Experience Level Based on Company Size
+    6. Median Salary vs Experience Level Based on Company Size
 
         - Startups (1-50 employees):
     
@@ -151,31 +151,31 @@ Findings and Solution
 
             * Executive-level: Executive-level professionals in large corporation earn a median salary of $1,53,667.
 
-    7) Mean and Median Salary Across the World
+    7. Mean and Median Salary Across the World
 
         - Globally, the mean salary for AI, ML, and data science professionals in United states is approximately $157,734, with a median salary of $148,500. Salaries vary significantly based on regional economic factors and cost of living.
 
-    8) Median Salary Based on Experience Level
+    8. Median Salary Based on Experience Level
 
         - When segmented by experience level, the median salary for entry-level professionals is $83,300, Executive-level professionals is $197,689,  mid-level professionals earn $120,000, and senior-level professionals earn $156,400.
 
-    9) Top 5 Jobs Based on Median Salary
+    9. Top 5 Jobs Based on Median Salary
 
         - The top-paying job titles based on median salary include AI Research Scientist, Machine Learning Engineer, Data Scientist, Data Engineer and Data Analyst, with median salaries ranging from $176,850 to $101,000.
 
-    10) Top 10 Job Titles
+    10. Top 10 Job Titles
 
         - The top 10 most common job titles in AI, ML, and data science include Data Scientist, Data Engineer, Data Analyst,  Machine Learning Engineer, Research Scientist, Applied Scientist, Data Architect, Analytics Engineer, Research Engineer and Business Intelligence Engineer, among others.
 
-    11) Company Location Based on Count of Job Titles
+    11. Company Location Based on Count of Job Titles
 
         - The distribution of job titles across company locations shows that 88.70% of positions are based in tech hubs such as United states, reflecting global centers for tech and innovation.
 
-    12) Mean Salary as a Function of Currency
+    12. Mean Salary as a Function of Currency
 
         - Mean salaries converted into different currencies reveal significant variations: professionals earning in USD have a mean salary of $156,711, while those earning in EUR have $64,680, and those in GBP earn $77,758, reflecting currency exchange rates and local economic conditions.
 
-    13) Mean Salary as a Function of Company Location
+    13. Mean Salary as a Function of Company Location
 
         - Mean salaries vary by company location: professionals working in high-cost-of-living countries like United states earn $157,734 , while those in emerging tech markets like India earn $46,298.
 
@@ -203,11 +203,11 @@ Findings and Solution
 
         - Utilize visualizations such as bar charts, line graphs, and geographical maps to:
 
-            1) Illustrate regional salary distributions and variations.
+            1. Illustrate regional salary distributions and variations.
 
-            2) Compare median salaries across job titles and experience levels.
+            2. Compare median salaries across job titles and experience levels.
 
-            3) Visualize salary trends over time (2020-2024) and by company size or location.
+            3. Visualize salary trends over time (2020-2024) and by company size or location.
 
     * Conclusion
 
