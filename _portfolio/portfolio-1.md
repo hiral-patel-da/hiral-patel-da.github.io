@@ -63,7 +63,7 @@ Findings and Solution
 
     3. Salary vs Employee Residence
 
-        * Employees residing in major tech hubs like United states, Canada, United Kingdom tend to earn higher salaries compared to those in smaller cities or rural areas.
+        * Employees located in major tech hubs across countries such as the United States, Canada, and the United Kingdom typically earn higher salaries than those in Countries with smaller cities or rural areas.
 
     4. Top 10 Countries Data Science Employees Live In
 
