@@ -1,6 +1,6 @@
 ---
 title: " AirBNB Data Visualization "
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+excerpt: "<img src='/images/portfolio-4.png'>"
 collection: portfolio
 ---
 # Project Goal
