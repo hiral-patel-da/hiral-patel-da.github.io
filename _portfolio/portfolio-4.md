@@ -54,25 +54,25 @@ Findings
 
     - A bar graph showing average prices by number of bedrooms.
 
-    ![alt text](<Screenshot 2024-07-24 160234.png>)
+    ![alt text!](<Screenshot 2024-07-24 160234.png>)
 
     - A map visualization pinpointing average prices by zip code.
 
-    ![alt text](<Screenshot 2024-07-24 122655-1.png>)
+    ![alt text!](<Screenshot 2024-07-24 122655-1.png>)
 
     - A line chart illustrating revenue trends across the year.
 
-    ![alt text](<Screenshot 2024-07-24 155853.png>)
+    ![alt text!](<Screenshot 2024-07-24 155853.png>)
 
     - A table highlighting the distribution of listings by number of bedrooms.
 
-    ![alt text](<Screenshot 2024-07-24 160356.png>)
+    ![alt text!](<Screenshot 2024-07-24 160356.png>)
 
 * Interactivity: Enable hover-over capabilities on the map for detailed zip code and price information, enhancing user engagement and understanding.
 
 * Insightful Presentation: Provide clear annotations and insights alongside visualizations to facilitate understanding of key trends and patterns.
 
-    ![alt text](<Screenshot 2024-07-24 160727.png>)
+    ![alt text!](<Screenshot 2024-07-24 160727.png>)
 
 # Conclusion
 
