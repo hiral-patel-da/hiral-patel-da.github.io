@@ -9,7 +9,7 @@ To analyze and visualize the Seattle Airbnb listings dataset from 2016 to uncove
 
 # Live Dashboard
 
-The live dashboard can be viewed at the following link: https://public.tableau.com/app/profile/hiral.patel6427/viz/FactorstoforwhenBuyingAirbnb/Story1
+The live dashboard can be viewed at the following link: <https://public.tableau.com/app/profile/hiral.patel6427/viz/FactorstoforwhenBuyingAirbnb/Story1>
 
 
 # Objectives
@@ -85,6 +85,6 @@ Through comprehensive data visualization of the 2016 Seattle Airbnb listings dat
 
 # References
 
- - https://www.kaggle.com/datasets/alexanderfreberg/airbnb-listings-2016-dataset
+ - <https://www.kaggle.com/datasets/alexanderfreberg/airbnb-listings-2016-dataset>
 
- - https://www.youtube.com/watch?v=zOR0-nygfDE
+ - <https://www.youtube.com/watch?v=zOR0-nygfDE>
