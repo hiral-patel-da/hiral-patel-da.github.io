@@ -48,7 +48,7 @@ Findings
 
 ### Data Visualization Approach:
 
-    * Tool Utilization: Employ Tableau for creating interactive dashboards that visually represent findings through bar graphs, maps, and line charts.
+* Tool Utilization: Employ Tableau for creating interactive dashboards that visually represent findings through bar graphs, maps, and line charts.
 
 * Dashboard Components: Develop a comprehensive dashboard featuring:
 
