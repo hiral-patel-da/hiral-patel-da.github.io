@@ -1,11 +1,16 @@
 ---
-title: " AirBNB Data Visualization "
+title: " AirBNB Data Visualization in Tableau Public "
 excerpt: "<img src='/images/portfolio-4.png'>"
 collection: portfolio
 ---
 # Project Goal
 
 To analyze and visualize the Seattle Airbnb listings dataset from 2016 to uncover insights into pricing trends, geographic patterns, and accommodation preferences, ultimately providing actionable insights for stakeholders in the hospitality industry.
+
+# Live Dashboard
+
+The live dashboard can be viewed at the following link: https://public.tableau.com/app/profile/hiral.patel6427/viz/FactorstoforwhenBuyingAirbnb/Story1
+
 
 # Objectives
 
@@ -48,7 +53,7 @@ Findings
 
 ### Data Visualization Approach:
 
-* Tool Utilization: Employ Tableau for creating interactive dashboards that visually represent findings through bar graphs, maps, and line charts.
+* Tool Utilization: Tableau Public for creating interactive dashboards that visually represent findings through bar graphs, maps, and line charts.
 
 * Dashboard Components: Develop a comprehensive dashboard featuring:
 
@@ -77,3 +82,9 @@ Findings
 # Conclusion
 
 Through comprehensive data visualization of the 2016 Seattle Airbnb listings dataset, this project has uncovered valuable insights into pricing dynamics, geographic trends, seasonal revenue patterns, and accommodation preferences. The findings highlight the influence of property size and location on pricing, seasonal fluctuations in demand, and the popularity of smaller accommodations. By leveraging Tableau for interactive dashboards, stakeholders can make informed decisions to optimize pricing strategies and cater to market preferences effectively in Seattle's dynamic hospitality sector.
+
+# References
+
+ - https://www.kaggle.com/datasets/alexanderfreberg/airbnb-listings-2016-dataset
+
+ - https://www.youtube.com/watch?v=zOR0-nygfDE
