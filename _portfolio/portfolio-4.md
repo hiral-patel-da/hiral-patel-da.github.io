@@ -54,25 +54,25 @@ Findings
 
     - A bar graph showing average prices by number of bedrooms.
 
-    ![alt text!](<Screenshot 2024-07-24 160234.png>)
+    <a href='/images/Price-per-Bedroom.png' target='_blank'><image src='/images/Price-per-Bedroom.png' /></a>
 
     - A map visualization pinpointing average prices by zip code.
 
-    ![alt text!](<Screenshot 2024-07-24 122655-1.png>)
+    <a href='/images/average-price-per-zip-code.png' target='_blank'><image src='/images/average-price-per-zip-code.png' /></a>
 
     - A line chart illustrating revenue trends across the year.
 
-    ![alt text!](<Screenshot 2024-07-24 155853.png>)
+    <a href='/images/Revenue-per-Year.png' target='_blank'><image src='/images/Revenue-per-Year.png' /></a>
 
     - A table highlighting the distribution of listings by number of bedrooms.
 
-    ![alt text!](<Screenshot 2024-07-24 160356.png>)
+    <a href='/images/Count-of-Distinct-bedroom.png' target='_blank'><image src='/images/Count-of-Distinct-bedroom.png' /></a>
 
 * Interactivity: Enable hover-over capabilities on the map for detailed zip code and price information, enhancing user engagement and understanding.
 
 * Insightful Presentation: Provide clear annotations and insights alongside visualizations to facilitate understanding of key trends and patterns.
 
-    ![alt text!](<Screenshot 2024-07-24 160727.png>)
+<a href='/images/Dashboard.png' target='_blank'><image src='/images/Dashboard.png' /></a>
 
 # Conclusion
 
