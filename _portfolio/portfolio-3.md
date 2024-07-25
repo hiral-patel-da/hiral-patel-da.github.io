@@ -85,7 +85,6 @@ Join [Portfolio Project 1]..CovidVaccinations vac
 where dea.continent is not null
 order by 2,3
 
-
 -- With CTE 
 
 with popvsvac (continent, location, date, population, new_vaccinations, rollingpeoplevaccinated)
