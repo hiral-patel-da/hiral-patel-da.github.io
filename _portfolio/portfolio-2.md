@@ -210,6 +210,6 @@ Where row_num > 1
 
 - <https://www.youtube.com/watch?v=8rO7ztF4NtU&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f&index=3>
 
-- <https://www.kaggle.com/datasets/tmthyjames/nashville-housing-data>
+- <https://github.com/AlexTheAnalyst/PortfolioProjects/blob/main/Nashville%20Housing%20Data%20for%20Data%20Cleaning.xlsx>
 
  

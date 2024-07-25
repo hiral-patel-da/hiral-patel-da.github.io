@@ -106,6 +106,15 @@ select *, (rollingpeoplevaccinated/population)*100 percentpopulationvaccinated
 from popvsvac
 
 ```
-Solution
-====
+
+# Solution
+
 This project involves querying and analyzing data from the "CovidDeaths" and "CovidVaccinations" tables within the COVID-19 database. Utilizing SQL queries, views, and temporary tables, the project aims to store and visualize data for deeper analysis and presentation of findings. By focusing on infection rates, mortality rates, and vaccination progress, this exploration seeks to provide actionable insights for healthcare professionals, policymakers, and researchers to enhance COVID-19 response strategies globally.
+
+# References
+
+- <https://www.youtube.com/watch?v=qfyynHBFOsM&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f&index=1>
+
+- <https://github.com/AlexTheAnalyst/PortfolioProjects/blob/main/CovidDeaths.xlsx>
+
+- <https://github.com/AlexTheAnalyst/PortfolioProjects/blob/main/CovidVaccinations.xlsx>
