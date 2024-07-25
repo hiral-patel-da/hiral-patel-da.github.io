@@ -7,6 +7,10 @@ collection: portfolio
 
 To gather and analyze salary information from around the world for jobs in Artificial Intelligence (AI), Machine Learning (ML), and Data Science. This dataset will show how much people in these fields earn based on their job, industry, location, and experience level. The goal is to provide clear, useful insights that help companies, employees, and policymakers understand and improve pay practices in AI, ML, and data science globally.
 
+# Live Dashboard
+
+The live dashboard can be viewed at the following link: <https://public.tableau.com/app/profile/hiral.patel6427/viz/DatascientistjosalaryanalysisEDA/Dashboard1>
+
 # Objective
 
 
