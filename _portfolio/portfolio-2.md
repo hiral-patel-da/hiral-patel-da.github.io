@@ -1,6 +1,6 @@
 ---
 title: "Data Cleaning in SQL"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+excerpt: "<img src='/images/data-cleaning-housing-profile.png'>"
 collection: portfolio
 ---
 
@@ -36,12 +36,180 @@ Solution
 
 * To clean and Format the raw data in SQL, I used the following functions to make data more precised and improve its query performance. 
 
-    - For standardizing date format, I used `CONVERT` syntax to change the datetime format to date format of the column "SaleDate" and then Altered the table to add the converted datetime format into date and then updated the table. 
+ For standardizing date format, I used `CONVERT` syntax to change the datetime format to date format of the column "SaleDate" and then Altered the table to add the converted datetime format into date and then updated the table. 
 
-    - For filling in missing property address, First, I tried understanding where these missing values are located by listing all data and ordering it by "ParcelID". Then, I found other records "(b)" that have valid "PropertyAddress" values for the same "ParcelID", which can be used to fill in the missing ones in records "(a)" where "PropertyAddress" is null with `ISNULL` syntax. Finally, in the third query I updated the dataset by actually replacing the null "PropertyAddress" values in records "(a)" with the corresponding values from records "(b)". 
+``` sql
+--Standardize Date format
 
-    - For splitting address components into separate columns, I used string functions like `SUBSTRING` syntax returns the substring from the "PropertyAddress" as per the position returned by the `CHARINDEX`, Then I used `CHARINDEX` to return the substring position of delimeter from the "PropertyAddress", Then I used `LEN` syntax to calculate the length of column "PropertyAddress" and finally I altered the table and update the table and repeated the same steps for the column "OwnerAddress".
+select SaleDate, CONVERT(Date,SaleDate)
+from [Portfolio Project 1].dbo.NashvilleHousing
 
-    - For converting "Y" and "N" to "Yes" and "No" in the "sold as vacant" column, I used `CASE STATEMENT` to replace "Y" to "Yes" and "N" to "No" to make data more clear anf meaningful.
+Update [Portfolio Project 1].dbo.NashvilleHousing
+SET SaleDate = CONVERT(Date,SaleDate)
 
-    - For removing duplicates, I created a `COMMON TABLE EXPRESSION` and gave a `ROW NUMBER` to dataset to figure out how many duplicates are there by using `PARTITION BY` and selecting each columns. After `CTE` is created select all column and use `WHERE` syntax to figure `ROW NUMBER` greater than 1. and remove them using `DELETE` syntax.  
+-- it didn't update the table so, we will work on altering the table first
+
+Alter Table [Portfolio Project 1].dbo.NashvilleHousing
+Add SaleDateConverted Date;
+
+UPDATE [Portfolio Project 1].dbo.NashvilleHousing
+SET SaleDateConverted = CONVERT(Date,SaleDate)
+
+select SaleDateConverted, CONVERT(Date,SaleDate)
+from [Portfolio Project 1].dbo.NashvilleHousing
+
+```
+
+ For filling in missing property address, First, I tried understanding where these missing values are located by listing all data and ordering it by "ParcelID". Then, I found other records "(b)" that have valid "PropertyAddress" values for the same "ParcelID", which can be used to fill in the missing ones in records "(a)" where "PropertyAddress" is null with `ISNULL` syntax. Finally, in the third query I updated the dataset by actually replacing the null "PropertyAddress" values in records "(a)" with the corresponding values from records "(b)". 
+
+``` sql
+-- populate property address data
+
+select *  
+from [Portfolio Project 1].dbo.NashvilleHousing
+--where PropertyAddress is null
+order by ParcelID 
+
+select a.ParcelID, a.PropertyAddress, b.ParcelID, b.PropertyAddress, ISNULL(a.PropertyAddress,b.PropertyAddress)  
+from [Portfolio Project 1].dbo.NashvilleHousing a
+join [Portfolio Project 1].dbo.NashvilleHousing b
+	on a.ParcelID = b.ParcelID 
+	and a.[UniqueID ] <> b.[UniqueID ] 
+where a.PropertyAddress is null
+
+Update a 
+SET PropertyAddress = ISNULL(a.PropertyAddress,b.PropertyAddress)
+from [Portfolio Project 1].dbo.NashvilleHousing a
+join [Portfolio Project 1].dbo.NashvilleHousing b
+	on a.ParcelID = b.ParcelID 
+	and a.[UniqueID ] <> b.[UniqueID ] 
+where a.PropertyAddress is null
+
+```
+
+ For splitting address components into separate columns, I used string functions like `SUBSTRING` syntax returns the substring from the "PropertyAddress" as per the position returned by the `CHARINDEX`, Then I used `CHARINDEX` to return the substring position of delimeter from the "PropertyAddress", Then I used `LEN` syntax to calculate the length of column "PropertyAddress" and finally I altered the table and update the table and repeated the same steps for the column "OwnerAddress".
+
+``` sql
+-- Breaking out Address into Individual Columns (Address, City, State)
+
+select PropertyAddress  
+from [Portfolio Project 1].dbo.NashvilleHousing
+--where PropertyAddress is null
+--order by ParcelID 
+
+SELECT 
+SUBSTRING(PropertyAddress, 1, CHARINDEX(',', PropertyAddress)-1) as Address,
+SUBSTRING(PropertyAddress, CHARINDEX(',', PropertyAddress) + 1, LEN(PropertyAddress)) as Address
+FROM [Portfolio Project 1].dbo.NashvilleHousing
+
+Alter Table [Portfolio Project 1].dbo.NashvilleHousing
+Add PropertySplitAddress Nvarchar(255);
+
+UPDATE [Portfolio Project 1].dbo.NashvilleHousing
+SET PropertySplitAddress = SUBSTRING(PropertyAddress, 1, CHARINDEX(',', PropertyAddress)-1)
+
+Alter Table [Portfolio Project 1].dbo.NashvilleHousing
+Add PropertySplitCity Nvarchar(255);
+
+UPDATE [Portfolio Project 1].dbo.NashvilleHousing
+SET PropertySplitCity = SUBSTRING(PropertyAddress, CHARINDEX(',', PropertyAddress) + 1, LEN(PropertyAddress)) 
+
+Select * 
+from [Portfolio Project 1].dbo.NashvilleHousing
+
+
+Select OwnerAddress  
+from [Portfolio Project 1].dbo.NashvilleHousing
+
+Select 
+PARSENAME(REPLACE(OwnerAddress,',','.') ,3),
+PARSENAME(REPLACE(OwnerAddress,',','.') ,2),
+PARSENAME(REPLACE(OwnerAddress,',','.') ,1)
+from [Portfolio Project 1].dbo.NashvilleHousing
+
+Alter Table [Portfolio Project 1].dbo.NashvilleHousing
+Add OwnerSplitAddress Nvarchar(255);
+
+UPDATE [Portfolio Project 1].dbo.NashvilleHousing
+SET OwnerSplitAddress = PARSENAME(REPLACE(OwnerAddress,',','.') ,3)
+ 
+Alter Table [Portfolio Project 1].dbo.NashvilleHousing
+Add OwnerSplitCity Nvarchar(255);
+
+UPDATE [Portfolio Project 1].dbo.NashvilleHousing
+SET OwnerSplitCity = PARSENAME(REPLACE(OwnerAddress,',','.') ,2) 
+
+Alter Table [Portfolio Project 1].dbo.NashvilleHousing
+Add OwnerSplitState Nvarchar(255);
+
+UPDATE [Portfolio Project 1].dbo.NashvilleHousing
+SET OwnerSplitState = PARSENAME(REPLACE(OwnerAddress,',','.') ,1)
+
+Select * 
+from [Portfolio Project 1].dbo.NashvilleHousing
+
+```
+
+ For converting "Y" and "N" to "Yes" and "No" in the "sold as vacant" column, I used `CASE STATEMENT` to replace "Y" to "Yes" and "N" to "No" to make data more clear anf meaningful.
+
+```sql
+-- Change Y and N to Yes and No in "Sold as Vacant" field
+
+select Distinct(SoldAsVacant), COUNT(SoldAsVacant)
+from [Portfolio Project 1].dbo.NashvilleHousing
+Group by SoldAsVacant 
+order by 2
+
+
+--Case Statement
+Select SoldAsVacant,
+Case when SoldAsVacant = 'Y' THEN 'Yes'
+	when SoldAsVacant = 'N' THEN 'No'
+	Else SoldAsVacant 
+	END
+from [Portfolio Project 1].dbo.NashvilleHousing
+
+UPDATE [Portfolio Project 1].dbo.NashvilleHousing
+SET SoldAsVacant  = Case when SoldAsVacant = 'Y' THEN 'Yes'
+					when SoldAsVacant = 'N' THEN 'No'
+					Else SoldAsVacant 
+					END
+```
+
+For removing duplicates, I created a `COMMON TABLE EXPRESSION` and gave a `ROW NUMBER` to dataset to figure out how many duplicates are there by using `PARTITION BY` and selecting each columns. After `CTE` is created select all column and use `WHERE` syntax to figure `ROW NUMBER` greater than 1. and remove them using `DELETE` syntax. 
+
+``` sql
+ -- Remove Duplicates
+
+With RowNumCTE AS(
+Select *,
+	ROW_NUMBER() OVER(PARTITION BY ParcelID, PropertyAddress, SalePrice, SaleDate, LegalReference ORDER BY UniqueID) row_num
+from [Portfolio Project 1].dbo.NashvilleHousing
+--Order by ParcelID 
+)
+Select *
+From RowNumCTE 
+Where row_num > 1
+Order by PropertyAddress 
+
+ -- to remove Duplicate found 
+
+With RowNumCTE AS(
+Select *,
+	ROW_NUMBER() OVER(PARTITION BY ParcelID, PropertyAddress, SalePrice, SaleDate, LegalReference ORDER BY UniqueID) row_num
+from [Portfolio Project 1].dbo.NashvilleHousing
+--Order by ParcelID 
+)
+Delete
+From RowNumCTE 
+Where row_num > 1
+
+```
+
+# References
+
+- <https://www.youtube.com/watch?v=8rO7ztF4NtU&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f&index=3>
+
+- <https://www.kaggle.com/datasets/tmthyjames/nashville-housing-data>
+
+ 
