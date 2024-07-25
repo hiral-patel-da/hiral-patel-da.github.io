@@ -1,6 +1,6 @@
 ---
 title: "Data science job salary analysis"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+excerpt: "<img src='/images/500x300.png'>"
 collection: portfolio
 ---
 Project Goal 
@@ -45,57 +45,164 @@ Findings and Solution
 
 -  Findings for Objective 1: Clean and Prepare Data
 
-    * Duplicate Removal: After inspecting the dataset, duplicates were identified based on all fields. A total of 8,261 duplicate entries were found and successfully removed, ensuring each record is unique.
+ Duplicate Removal: After inspecting the dataset, duplicates were identified based on all fields. A total of 8,261 duplicate entries were found and successfully removed, ensuring each record is unique.
 
-    * Column Renaming: The columns experience_level, employment_type, and company_size were improved for better readability. No changes were made to other columns to maintain consistency across the dataset.
+```sql
+-- To remove duplicates from the original table we will first create a new table to avoid messing with the raw table. 
+-- after generating the new table, we will rename the new table. 
 
-    * Salary Formatting: The salary_in_usd column was formatted to enhance readability. Salaries now display with commas for thousands separators and are rounded to zero decimal places throughout the dataset.
+CREATE TABLE [Job Salary Analysis ] .dbo.Data_Scientist_Salary_Analysis_cleaned (
+	[work_year] [float] NULL,
+	[experience_level] [nvarchar](255) NULL,
+	[employment_type] [nvarchar](255) NULL,
+	[job_title] [nvarchar](255) NULL,
+	[salary] [float] NULL,
+	[salary_currency] [nvarchar](255) NULL,
+	[salary_in_usd] [float] NULL,
+	[employee_residence] [nvarchar](255) NULL,
+	[remote_ratio] [float] NULL,
+	[company_location] [nvarchar](255) NULL,
+	[company_size] [nvarchar](255) NULL
+) ON [PRIMARY];
+
+-- to remove duplicates, we will select distinct each column from the raw (old) table and insert it into new (genereated) table.
+
+insert into [Job Salary Analysis ] .dbo.Data_Scientist_Salary_Analysis_cleaned
+select distinct * from [Job Salary Analysis ] .dbo.[Data Scientist Salary Analysis];
+
+```
+
+ Column Renaming: The columns experience_level, employment_type, and company_size were improved for better readability. No changes were made to other columns to maintain consistency across the dataset.
+
+```sql
+-- We will update the aliases in column experience_level, employment_type, and company_size.
+
+--1) we will first select the column experience_level from the table and change the aliases using CASE, WHEN and THEN statement to better understand the dataset.
+
+select experience_level, 
+		(Case when experience_level ='SE' then 'Senior Level'
+		when experience_level = 'EN' then 'Entry Level'
+		when experience_level = 'MI' then ' Mid Level'
+		When experience_level = 'EX' then 'Executive Level'
+		END) experience_level
+from [Job Salary Analysis ] .dbo.[Data Scientist Salary Analysis]
+
+--- we will update the table by using update syntax for column experience_level.
+
+UPDATE [Job Salary Analysis ] .dbo.[Data Scientist Salary Analysis]
+SET experience_level = Case when experience_level ='SE' then 'Senior Level'
+		when experience_level = 'EN' then 'Entry Level'
+		when experience_level = 'MI' then ' Mid Level'
+		When experience_level = 'EX' then 'Executive Level'
+		END
+
+--2) we will first select the column employment_type from the table and change the aliases using CASE, WHEN and THEN statement to bettwr understand the dataset.
+
+Select employment_type, 
+		(Case when employment_type  ='FT' then 'Full Time'
+		when employment_type  = 'PT' then 'Part Time'
+		when employment_type  = 'CT' then 'Contract Basis'
+		When employment_type  = 'FL' then 'Freelance'
+		END) employment_type
+from [Job Salary Analysis ] .dbo.[Data Scientist Salary Analysis]
+
+--- we will update the table by using update syntax for column employment_type.
+
+UPDATE [Job Salary Analysis ] .dbo.[Data Scientist Salary Analysis]
+SET  employment_type = Case when employment_type  ='FT' then 'Full Time'
+		when employment_type  = 'PT' then 'Part Time'
+		when employment_type  = 'CT' then 'Contract Basis'
+		When employment_type  = 'FL' then 'Freelance'
+		END
+
+--3) we will first select the column company_size from the table and change the aliases using CASE, WHEN and THEN statement to bettwr understand the dataset.
+
+Select company_size, 
+	(Case when company_size   ='S' then 'Small'
+		when company_size  = 'M' then 'Medium'
+		when company_size  = 'L' then 'Large'
+		END) company_size
+From [Job Salary Analysis ] .dbo.[Data Scientist Salary Analysis]
+
+--- we will update the table by using update syntax for column company_size.
+
+UPDATE [Job Salary Analysis ] .dbo.[Data Scientist Salary Analysis]
+SET company_size = Case when company_size   ='S' then 'Small'
+		when company_size  = 'M' then 'Medium'
+		when company_size  = 'L' then 'Large'
+		END
+
+```
+
+ Salary Formatting: The salary_in_usd column was formatted to enhance readability. Salaries now display with commas for thousands separators and are rounded to zero decimal places throughout the dataset.
 
 - Findings for Objective 2: Data Exploration
 
-    1. Distribution of Top 10 Job Titles
+- Distribution of Top 10 Job Titles
 
-        * The top 10 job titles in AI, ML, and data science roles include positions such as Data Scientist, Machine Learning Engineer, and AI Researcher, with Data Scientist being the most prevalent.
+The top 10 job titles in AI, ML, and data science roles include positions such as Data Scientist, Machine Learning Engineer, and AI Researcher, with Data Scientist being the most prevalent.
 
-    2. Salary by Employment Type
+<a href='/images/top-10-job-titles.png' target='_blank'><image src='/images/top-10-job-titles.png' /></a>
 
-        * Full-time positions generally command higher salaries compared to part-time and contract roles in AI, ML, and data science fields.
+- Salary by Employment Type
 
-    3. Salary vs Employee Residence
+Full-time positions generally command higher salaries compared to part-time and contract roles in AI, ML, and data science fields.
 
-        * Employees located in major tech hubs across countries such as the United States, Canada, and the United Kingdom typically earn higher salaries than those in Countries with smaller cities or rural areas.
+<a href='/images/salary-by-employment-type.png' target='_blank'><image src='/images/salary-by-employment-type.png' /></a>
 
-    4. Top 10 Countries Data Science Employees Live In
+-  Salary vs Employee Residence
 
-        * Data science professionals are predominantly located in the United States, India, and the United Kingdom, reflecting global centers for tech and data-driven industries.
+ Employees located in major tech hubs across countries such as the United States, Canada, and the United Kingdom typically earn higher salaries than those in Countries with smaller cities or rural areas.
 
-    5. Distribution of Data Science Jobs by Company Location
+ <a href='/images/Salary-vs-residence.png' target='_blank'><image src='/images/Salary-vs-residence.png' /></a>
 
-        * Data science jobs are concentrated in cities with established tech industries, such as United states, United kingdom  and Canada, indicating regional clusters of opportunities.
+- Top 10 Countries Data Science Employees Live In
 
-    6. Top 5 Highest Salary by Job Title
+ Data science professionals are predominantly located in the United States, India, and the United Kingdom, reflecting global centers for tech and data-driven industries.
 
-        * Roles like Data Scientist, Data Engineer, Data Analyst, Machine Learning Engineer and Analytics Engineer consistently offer the highest salaries in the field.
+<a href='/images/top-10-country-employee-resides-in.png' target='_blank'><image src='/images/top-10-country-employee-resides-in.png' /></a>
 
-    7. Most Common Job Titles and Employment Types
+- Distribution of Data Science Jobs by Company Location
 
-        * Data Scientist and Machine Learning Engineer are among the most common job titles, predominantly found in full-time employment.
+ Data science jobs are concentrated in cities with established tech industries, such as United states, United kingdom  and Canada, indicating regional clusters of opportunities.
 
-    8. Impact of Experience Level and Employment Type on Salary
+ <a href='/images/company_location.png' target='_blank'><image src='/images/company_location.png' /></a>       
 
-        * Experience level significantly influences salary, with senior-level positions commanding higher compensation, particularly in full-time roles compared to part-time or contract positions.
+- Top 5 Highest Salary by Job Title
 
-    9. Salary Changes Over Time (2020-2024)
+ Roles like Data Scientist, Data Engineer, Data Analyst, Machine Learning Engineer and Analytics Engineer consistently offer the highest salaries in the field.
 
-        * Salaries in AI, ML, and data science have shown a steady increase from 2020 to 2024, driven by growing demand and technological advancements.
+<a href='/images/top-5-highest-salary-jobs.png' target='_blank'><image src='/images/top-5-highest-salary-jobs.png' /></a>        
 
-    10. Differences in Salary Trends Between Company Locations or Sizes
+- Most Common Job Titles and Employment Types
 
-        * Companies based in high-cost-of-living areas or large corporations generally offer higher salaries compared to startups or companies in lower-cost regions.
+ Data Scientist and Machine Learning Engineer are among the most common job titles, predominantly found in full-time employment.
 
-    11. Impact of Remote Work on Salary
+<a href='/images/common-job-title-emplyement-type.png' target='_blank'><image src='/images/common-job-title-emplyement-type.png' /></a>
 
-        * Remote work has led to a shift in salary dynamics, with some professionals earning higher salaries due to global talent competition and others seeing adjustments based on local market conditions.
+- Impact of Experience Level and Employment Type on Salary
+
+Experience level significantly influences salary, with senior-level positions commanding higher compensation, particularly in full-time roles compared to part-time or contract positions.
+
+<a href='/images/el-et-impacting-salary.png' target='_blank'><image src='/images/el-et-impacting-salary.png' /></a>
+
+- Salary Changes Over Time (2020-2024)
+
+Salaries in AI, ML, and data science have shown a steady increase from 2020 to 2024, driven by growing demand and technological advancements.
+
+<a href='/images/salary-change-overtime.png' target='_blank'><image src='/images/salary-change-overtime.png' /></a>
+
+- Differences in Salary Trends Between Company Locations or Sizes
+
+ Companies based in high-cost-of-living areas or large corporations generally offer higher salaries compared to startups or companies in lower-cost regions.
+
+<a href='/images/difference-in-salary-by-company-size.png' target='_blank'><image src='/images/difference-in-salary-by-company-size.png' /></a>
+
+- Impact of Remote Work on Salary
+
+ Remote work has led to a shift in salary dynamics, with some professionals earning higher salaries due to global talent competition and others seeing adjustments based on local market conditions.
+
+<a href='/images/remote-work-impacting-salary.png' target='_blank'><image src='/images/remote-work-impacting-salary.png' /></a>
 
 * Exploratory Data Analysis (Tableau)
 
@@ -103,21 +210,31 @@ Findings and Solution
 
         - The distribution of experience levels among AI, ML, and data science professionals shows that 8.28% are entry-level (<2 years), 25.99% are mid-level (2-5 years), and 62.98% are senior-level (>5 years).
 
+<a href='/' target='_blank'><image src='/' /></a>
+
     2. Distribution of Work Type
 
         - The distribution of work types reveals that 99.58% of professionals work full-time, 0.20% work part-time, 0.15% work on a contract basis, and 0.07% are freelancers or consultants.
+
+<a href='/' target='_blank'><image src='/' /></a>
 
     3. Distribution of Company Size
 
         - In terms of company size, 0.98% of professionals work in startups, 93.27% in medium-sized companies, and 5.75% in large corporations.
 
+<a href='/' target='_blank'><image src='/' /></a>
+
     4. Median Salary vs Experience Level
 
         - The median salary increases with experience level: entry-level professionals earn approximately $80,000 mid-level professionals earn $1,10,707.5 senior-level professionals earn $1,52,500 and Executive-level professionals earn $1,96,000.
 
+<a href='/' target='_blank'><image src='/' /></a>
+
     5. Median Salary vs Employment Type
 
         - Median salaries vary by employment type: full-time employees earn $1,33,275 part-time employees earn $58,400 contract workers earn $93,856 and freelancers/consultants earn $36,007.
+
+<a href='/' target='_blank'><image src='/' /></a>
 
     6. Median Salary vs Experience Level Based on Company Size
 
@@ -151,33 +268,52 @@ Findings and Solution
 
             * Executive-level: Executive-level professionals in large corporation earn a median salary of $1,53,667.
 
+<a href='/' target='_blank'><image src='/' /></a>
+
     7. Mean and Median Salary Across the World
 
         - Globally, the mean salary for AI, ML, and data science professionals in United states is approximately $157,734, with a median salary of $148,500. Salaries vary significantly based on regional economic factors and cost of living.
+
+ <a href='/' target='_blank'><image src='/' /></a>       
 
     8. Median Salary Based on Experience Level
 
         - When segmented by experience level, the median salary for entry-level professionals is $83,300, Executive-level professionals is $197,689,  mid-level professionals earn $120,000, and senior-level professionals earn $156,400.
 
+ <a href='/' target='_blank'><image src='/' /></a>       
+ <a href='/' target='_blank'><image src='/' /></a>
+ <a href='/' target='_blank'><image src='/' /></a>
+ <a href='/' target='_blank'><image src='/' /></a>
+
     9. Top 5 Jobs Based on Median Salary
 
         - The top-paying job titles based on median salary include AI Research Scientist, Machine Learning Engineer, Data Scientist, Data Engineer and Data Analyst, with median salaries ranging from $176,850 to $101,000.
+
+ <a href='/' target='_blank'><image src='/' /></a>       
 
     10. Top 10 Job Titles
 
         - The top 10 most common job titles in AI, ML, and data science include Data Scientist, Data Engineer, Data Analyst,  Machine Learning Engineer, Research Scientist, Applied Scientist, Data Architect, Analytics Engineer, Research Engineer and Business Intelligence Engineer, among others.
 
+<a href='/' target='_blank'><image src='/' /></a>
+
     11. Company Location Based on Count of Job Titles
 
         - The distribution of job titles across company locations shows that 88.70% of positions are based in tech hubs such as United states, reflecting global centers for tech and innovation.
+
+ <a href='/' target='_blank'><image src='/' /></a>       
 
     12. Mean Salary as a Function of Currency
 
         - Mean salaries converted into different currencies reveal significant variations: professionals earning in USD have a mean salary of $156,711, while those earning in EUR have $64,680, and those in GBP earn $77,758, reflecting currency exchange rates and local economic conditions.
 
+ <a href='/' target='_blank'><image src='/' /></a>       
+
     13. Mean Salary as a Function of Company Location
 
         - Mean salaries vary by company location: professionals working in high-cost-of-living countries like United states earn $157,734 , while those in emerging tech markets like India earn $46,298.
+
+<a href='/' target='_blank'><image src='/' /></a>        
 
 - Findings of Objective 3 - Detailed Report
 
@@ -208,6 +344,9 @@ Findings and Solution
             2. Compare median salaries across job titles and experience levels.
 
             3. Visualize salary trends over time (2020-2024) and by company size or location.
+
+ <a href='/' target='_blank'><image src='/' /></a>           
+<a href='/' target='_blank'><image src='/' /></a>
 
     * Conclusion
 
