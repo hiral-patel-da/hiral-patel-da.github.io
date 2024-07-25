@@ -24,22 +24,88 @@ Objectives
 Findings
 ===
 
-- Mortality Patterns: Variations in mortality rates indicate differing impacts of COVID-19 on healthcare systems and public health measures across countries.
+Mortality Patterns: Variations in mortality rates indicate differing impacts of COVID-19 on healthcare systems and public health measures across countries.
 
-<a href='/images/Continent-death.png' target='_blank'><image src='/images/Continent-death.png' /></a>
-<a href='/images/countries-death.png' target='_blank'><image src='/images/countries-death.png' /></a>
+``` sql
+--looking at total cases vs total deaths
+-- shows likelihood of dying if you contract covid in your country
 
-- Infection Spread: Analysis of infection rates reveals countries with higher percentages of their population affected by COVID-19, highlighting areas of intense transmission.
+select location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 as DeathPercentage
+from [Portfolio Project 1]..CovidDeaths
+where location like '%states%'and continent is not null
+order by 1,2
 
-<a href='/images/Countries-infection.png' target='_blank'><image src='/images/Countries-infection.png' /></a>
+--showing countries with highest death count per population
+
+select location, Max(cast(total_deaths as int)) as totaldeathcount
+from [Portfolio Project 1]..CovidDeaths
+-- where location like '%states%'
+where continent is not null
+group by location 
+order by totaldeathcount desc
+
+-- showing continents with highest death count per population
+
+select location , Max(cast(total_deaths as int)) as totaldeathcount
+from [Portfolio Project 1]..CovidDeaths
+-- where location like '%states%'
+where continent is null
+and location not in ('World','European Union', 'International')
+group by location 
+order by totaldeathcount desc
+
+```
+
+ Infection Spread: Analysis of infection rates reveals countries with higher percentages of their population affected by COVID-19, highlighting areas of intense transmission.
+
+```sql
+-- Looking at countries with highest infection rate compared to Population
+
+select location, population,date, Max(total_cases) as HighestInfectionCount, Max((total_cases /population))*100 as PercentPopulationInfected
+from [Portfolio Project 1]..CovidDeaths
+-- where location like '%states%'
+where continent is not null
+group by location, population, date
+order by PercentPopulationInfected desc
+
+```
+ Vaccination Progress: Insights into vaccination rates show varying levels of immunization coverage, reflecting the effectiveness of vaccination campaigns and healthcare infrastructure.
+
+```sql
+-- Looking at total population vs vaccinations
+
+Select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations,
+	--sum(cast(vac.new_vaccinations as int)) over (partition by dea.location) or
+	sum(convert(int, vac.new_vaccinations)) over (partition by dea.location order by dea.location, dea.date) as rollingpeoplevaccinated
+-- , (rollingpeoplevaccinated/population)*100
+From [Portfolio Project 1]..CovidDeaths dea
+Join [Portfolio Project 1]..CovidVaccinations vac
+	On dea.location = vac.location 
+	and dea.date = vac.date
+where dea.continent is not null
+order by 2,3
 
 
-- Vaccination Progress: Insights into vaccination rates show varying levels of immunization coverage, reflecting the effectiveness of vaccination campaigns and healthcare infrastructure.
+-- With CTE 
 
-<a href='/images/people-vaccinated.png' target='_blank'><image src='/images/people-vaccinated.png' /></a>
-<a href='/images/total-population-vs-vaccination.png' target='_blank'><image src='/images/total-population-vs-vaccination.png' /></a>
+with popvsvac (continent, location, date, population, new_vaccinations, rollingpeoplevaccinated)
+as
+(
+Select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations,
+	--sum(cast(vac.new_vaccinations as int)) over (partition by dea.location) or
+	sum(convert(int, vac.new_vaccinations)) over (partition by dea.location order by dea.location, dea.date) as rollingpeoplevaccinated
+-- , (rollingpeoplevaccinated/population)*100
+From [Portfolio Project 1]..CovidDeaths dea
+Join [Portfolio Project 1]..CovidVaccinations vac
+	On dea.location = vac.location 
+	and dea.date = vac.date
+where dea.continent is not null
+--order by 2,3
+)
+select *, (rollingpeoplevaccinated/population)*100 percentpopulationvaccinated
+from popvsvac
 
-
+```
 Solution
 ====
 This project involves querying and analyzing data from the "CovidDeaths" and "CovidVaccinations" tables within the COVID-19 database. Utilizing SQL queries, views, and temporary tables, the project aims to store and visualize data for deeper analysis and presentation of findings. By focusing on infection rates, mortality rates, and vaccination progress, this exploration seeks to provide actionable insights for healthcare professionals, policymakers, and researchers to enhance COVID-19 response strategies globally.
