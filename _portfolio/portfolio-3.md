@@ -1,6 +1,6 @@
 ---
 title: "Data Exploration In SQL"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+excerpt: "<img src='/images/covid-19-profile.png'>"
 collection: portfolio
 ---
 Project Goal
