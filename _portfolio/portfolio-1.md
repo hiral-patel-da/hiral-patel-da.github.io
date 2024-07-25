@@ -3,13 +3,12 @@ title: "Data science job salary analysis"
 excerpt: "<img src='/images/500x300.png'>"
 collection: portfolio
 ---
-Project Goal 
-====
+# Project Goal 
 
 To gather and analyze salary information from around the world for jobs in Artificial Intelligence (AI), Machine Learning (ML), and Data Science. This dataset will show how much people in these fields earn based on their job, industry, location, and experience level. The goal is to provide clear, useful insights that help companies, employees, and policymakers understand and improve pay practices in AI, ML, and data science globally.
 
-Objective
-=====
+# Objective
+
 
 * Objective 1: Clean and Prepare Data
 
@@ -34,8 +33,7 @@ Objective
 
     - Share the report to facilitate understanding and improvement of pay practices in AI, ML, and data science globally.
 
-Findings and Solution 
-====
+# Findings and Solution 
 
 * Objective 1 - (EXCEL & SQL)
 
@@ -43,7 +41,7 @@ Findings and Solution
 
 * Objective 2 - Exploratory Data Analysis (TABLEAU)
 
--  Findings for Objective 1: Clean and Prepare Data
+###  Findings for Objective 1: Clean and Prepare Data
 
  Duplicate Removal: After inspecting the dataset, duplicates were identified based on all fields. A total of 8,261 duplicate entries were found and successfully removed, ensuring each record is unique.
 
@@ -136,7 +134,7 @@ SET company_size = Case when company_size   ='S' then 'Small'
 
  Salary Formatting: The salary_in_usd column was formatted to enhance readability. Salaries now display with commas for thousands separators and are rounded to zero decimal places throughout the dataset.
 
-- Findings for Objective 2: Data Exploration
+### Findings for Objective 2: Data Exploration
 
 - Distribution of Top 10 Job Titles
 
@@ -204,150 +202,158 @@ Salaries in AI, ML, and data science have shown a steady increase from 2020 to 2
 
 <a href='/images/remote-work-impacting-salary.png' target='_blank'><image src='/images/remote-work-impacting-salary.png' /></a>
 
-* Exploratory Data Analysis (Tableau)
+### Exploratory Data Analysis (Tableau)
 
-   1. Distribution of Experience Level
+- Distribution of Experience Level
 
-        - The distribution of experience levels among AI, ML, and data science professionals shows that 8.28% are entry-level (<2 years), 25.99% are mid-level (2-5 years), and 62.98% are senior-level (>5 years).
+ The distribution of experience levels among AI, ML, and data science professionals shows that 8.28% are entry-level (<2 years), 25.99% are mid-level (2-5 years), and 62.98% are senior-level (>5 years).
 
-<a href='/' target='_blank'><image src='/' /></a>
+<a href='/images/Distribution of Experience Level.png' target='_blank'><image src='/images/Distribution of Experience Level.png' /></a>
 
-    2. Distribution of Work Type
+- Distribution of Work Type
 
-        - The distribution of work types reveals that 99.58% of professionals work full-time, 0.20% work part-time, 0.15% work on a contract basis, and 0.07% are freelancers or consultants.
+ The distribution of work types reveals that 99.58% of professionals work full-time, 0.20% work part-time, 0.15% work on a contract basis, and 0.07% are freelancers or consultants.
 
-<a href='/' target='_blank'><image src='/' /></a>
+<a href='/images/distribution of work type.png' target='_blank'><image src='/images/distribution of work type.png' /></a>
 
-    3. Distribution of Company Size
+- Distribution of Company Size
 
-        - In terms of company size, 0.98% of professionals work in startups, 93.27% in medium-sized companies, and 5.75% in large corporations.
+In terms of company size, 0.98% of professionals work in startups, 93.27% in medium-sized companies, and 5.75% in large corporations.
 
-<a href='/' target='_blank'><image src='/' /></a>
+<a href='/images/distribution of company size.png' target='_blank'><image src='/images/distribution of company size.png' /></a>
 
-    4. Median Salary vs Experience Level
+- Median Salary vs Experience Level
 
-        - The median salary increases with experience level: entry-level professionals earn approximately $80,000 mid-level professionals earn $1,10,707.5 senior-level professionals earn $1,52,500 and Executive-level professionals earn $1,96,000.
+ The median salary increases with experience level: entry-level professionals earn approximately $80,000 mid-level professionals earn $1,10,707.5 senior-level professionals earn $1,52,500 and Executive-level professionals earn $1,96,000.
 
-<a href='/' target='_blank'><image src='/' /></a>
+<a href='/images/salary vs experience level.png' target='_blank'><image src='/images/salary vs experience level.png' /></a>
 
-    5. Median Salary vs Employment Type
+- Median Salary vs Employment Type
 
-        - Median salaries vary by employment type: full-time employees earn $1,33,275 part-time employees earn $58,400 contract workers earn $93,856 and freelancers/consultants earn $36,007.
+ Median salaries vary by employment type: full-time employees earn $1,33,275 part-time employees earn $58,400 contract workers earn $93,856 and freelancers/consultants earn $36,007.
 
-<a href='/' target='_blank'><image src='/' /></a>
+<a href='/images/salary vs employment type.png' target='_blank'><image src='/images/salary vs employment type.png' /></a>
 
-    6. Median Salary vs Experience Level Based on Company Size
+- Median Salary vs Experience Level Based on Company Size
 
-        - Startups (1-50 employees):
+     Startups (1-50 employees):
     
-            * Entry-Level: Entry-level professionals in startups earn a median salary of $58,268.
+     * Entry-Level: Entry-level professionals in startups earn a median salary of $58,268.
 
-            * Mid-Level: Mid-level professionals in startups earn a median salary of $62,146.
+    * Mid-Level: Mid-level professionals in startups earn a median salary of $62,146.
 
-            * Senior-Level: Senior-level professionals in startups earn a median salary of $1,04,080.
+     * Senior-Level: Senior-level professionals in startups earn a median salary of $1,04,080.
 
-            * Executive-level: Executive-level professionals in startups earn a median salary of $1,15,222.
+     * Executive-level: Executive-level professionals in startups earn a median salary of $1,15,222.
 
-        - Medium-Sized Companies (51-500 employees):
+     Medium-Sized Companies (51-500 employees):
 
-            * Entry-Level: Entry-level professionals in medium-sized companies earn a median salary of $84,086.5.
+    * Entry-Level: Entry-level professionals in medium-sized companies earn a median salary of $84,086.5.
 
-            * Mid-Level: Mid-level professionals in medium-sized companies earn a median salary of $1,16,259.
+    * Mid-Level: Mid-level professionals in medium-sized companies earn a median salary of $1,16,259.
 
-            * Senior-Level: Senior-level professionals in medium-sized companies earn a median salary of $1,54,500.
+    * Senior-Level: Senior-level professionals in medium-sized companies earn a median salary of $1,54,500.
 
-            * Executive-level: Executive-level professionals in medium-sized earn a median salary of $1,51,200.
+    * Executive-level: Executive-level professionals in medium-sized earn a median salary of $1,51,200.
 
-        - Large Corporations (>500 employees):
+    Large Corporations (>500 employees):
 
-            * Entry-Level: Entry-level professionals in large corporations earn a median salary of $59,102.
+     * Entry-Level: Entry-level professionals in large corporations earn a median salary of $59,102.
 
-            * Mid-Level: Mid-level professionals in large corporations earn a median salary of $83,171.
+    * Mid-Level: Mid-level professionals in large corporations earn a median salary of $83,171.
 
-            * Senior-Level: Senior-level professionals in large corporations earn a median salary of $1,30,000.
+    * Senior-Level: Senior-level professionals in large corporations earn a median salary of $1,30,000.
 
-            * Executive-level: Executive-level professionals in large corporation earn a median salary of $1,53,667.
+    * Executive-level: Executive-level professionals in large corporation earn a median salary of $1,53,667.
 
-<a href='/' target='_blank'><image src='/' /></a>
+<a href='/images/salary vs experience level based on company size.png' target='_blank'><image src='/images/salary vs experience level based on company size.png' /></a>
 
-    7. Mean and Median Salary Across the World
+- Mean and Median Salary Across the World
 
-        - Globally, the mean salary for AI, ML, and data science professionals in United states is approximately $157,734, with a median salary of $148,500. Salaries vary significantly based on regional economic factors and cost of living.
+ Globally, the mean salary for AI, ML, and data science professionals in United states is approximately $157,734, with a median salary of $148,500. Salaries vary significantly based on regional economic factors and cost of living.
 
- <a href='/' target='_blank'><image src='/' /></a>       
+ <a href='/images/Mean and median salary across the world.png' target='_blank'><image src='/images/Mean and median salary across the world.png' /></a>       
 
-    8. Median Salary Based on Experience Level
+- Median Salary Based on Experience Level
 
-        - When segmented by experience level, the median salary for entry-level professionals is $83,300, Executive-level professionals is $197,689,  mid-level professionals earn $120,000, and senior-level professionals earn $156,400.
+ When segmented by experience level, the median salary for entry-level professionals is $83,300, Executive-level professionals is $197,689,  mid-level professionals earn $120,000, and senior-level professionals earn $156,400.
 
- <a href='/' target='_blank'><image src='/' /></a>       
- <a href='/' target='_blank'><image src='/' /></a>
- <a href='/' target='_blank'><image src='/' /></a>
- <a href='/' target='_blank'><image src='/' /></a>
+ <a href='/images/Median salary for entry level.png' target='_blank'><image src='/images/Median salary for entry level.png' /></a> 
 
-    9. Top 5 Jobs Based on Median Salary
+ <a href='/images/median salary for excecutive level.png' target='_blank'><image src='/images/median salary for excecutive level.png' /></a>
 
-        - The top-paying job titles based on median salary include AI Research Scientist, Machine Learning Engineer, Data Scientist, Data Engineer and Data Analyst, with median salaries ranging from $176,850 to $101,000.
+ <a href='/images/median salary for mid level.png' target='_blank'><image src='/images/median salary for mid level.png' /></a>
 
- <a href='/' target='_blank'><image src='/' /></a>       
+ <a href='/images/median salary for senior level.png' target='_blank'><image src='/images/median salary for senior level.png' /></a>
 
-    10. Top 10 Job Titles
+- Top 5 Jobs Based on Median Salary
 
-        - The top 10 most common job titles in AI, ML, and data science include Data Scientist, Data Engineer, Data Analyst,  Machine Learning Engineer, Research Scientist, Applied Scientist, Data Architect, Analytics Engineer, Research Engineer and Business Intelligence Engineer, among others.
+ The top-paying job titles based on median salary include AI Research Scientist, Machine Learning Engineer, Data Scientist, Data Engineer and Data Analyst, with median salaries ranging from $176,850 to $101,000.
 
-<a href='/' target='_blank'><image src='/' /></a>
+ <a href='/images/top 5 job titles.png' target='_blank'><image src='/images/top 5 job titles.png' /></a>       
 
-    11. Company Location Based on Count of Job Titles
+- Top 10 Job Titles
 
-        - The distribution of job titles across company locations shows that 88.70% of positions are based in tech hubs such as United states, reflecting global centers for tech and innovation.
+The top 10 most common job titles in AI, ML, and data science include Data Scientist, Data Engineer, Data Analyst,  Machine Learning Engineer, Research Scientist, Applied Scientist, Data Architect, Analytics Engineer, Research Engineer and Business Intelligence Engineer, among others.
 
- <a href='/' target='_blank'><image src='/' /></a>       
+<a href='/images/top 10 count of job titles.png' target='_blank'><image src='/images/top 10 count of job titles.png' /></a>
 
-    12. Mean Salary as a Function of Currency
+- Company Location Based on Count of Job Titles
 
-        - Mean salaries converted into different currencies reveal significant variations: professionals earning in USD have a mean salary of $156,711, while those earning in EUR have $64,680, and those in GBP earn $77,758, reflecting currency exchange rates and local economic conditions.
+ The distribution of job titles across company locations shows that 88.70% of positions are based in tech hubs such as United states, reflecting global centers for tech and innovation.
 
- <a href='/' target='_blank'><image src='/' /></a>       
+ <a href='/images/company location map based on count of job titles.png' target='_blank'><image src='/images/company location map based on count of job titles.png' /></a>       
 
-    13. Mean Salary as a Function of Company Location
+- Mean Salary as a Function of Currency
 
-        - Mean salaries vary by company location: professionals working in high-cost-of-living countries like United states earn $157,734 , while those in emerging tech markets like India earn $46,298.
+ Mean salaries converted into different currencies reveal significant variations: professionals earning in USD have a mean salary of $156,711, while those earning in EUR have $64,680, and those in GBP earn $77,758, reflecting currency exchange rates and local economic conditions.
 
-<a href='/' target='_blank'><image src='/' /></a>        
+ <a href='/images/mean salary as a function of currency.png' target='_blank'><image src='/images/mean salary as a function of currency.png' /></a>       
 
-- Findings of Objective 3 - Detailed Report
+- Mean Salary as a Function of Company Location
 
-    * For Companies:
+ Mean salaries vary by company location: professionals working in high-cost-of-living countries like United states earn $157,734 , while those in emerging tech markets like India earn $46,298.
 
-        - Competitive Salary Structures: Align salaries with industry standards and regional benchmarks to attract and retain top talent.
+<a href='/images/mean salary as a function of company location.png' target='_blank'><image src='/images/mean salary as a function of company location.png' /></a>        
 
-        - Remote Work Policies: Implement flexible work arrangements to expand recruitment strategies and access diverse talent pools.
+### Findings of Objective 3 - Detailed Report
 
-    * For Employees:
+ For Companies:
 
-        - Continuous Skill Development: Invest in ongoing education and certifications to enhance expertise and qualify for higher-paying roles.
+- Competitive Salary Structures: Align salaries with industry standards and regional benchmarks to attract and retain top talent.
 
-        - Negotiation Strategies: Use salary data insights to negotiate fair compensation packages based on skills and experience.
+- Remote Work Policies: Implement flexible work arrangements to expand recruitment strategies and access diverse talent pools.
 
-    * For Policymakers:
+For Employees:
 
-        - Policy Advocacy: Support policies that promote salary transparency and equitable pay practices across the tech sector.
+- Continuous Skill Development: Invest in ongoing education and certifications to enhance expertise and qualify for higher-paying roles.
 
-        - Education Initiatives: Fund programs that address skill gaps and foster innovation in AI, ML, and data science education.
+ - Negotiation Strategies: Use salary data insights to negotiate fair compensation packages based on skills and experience.
 
-    * Visualizations
+For Policymakers:
 
-        - Utilize visualizations such as bar charts, line graphs, and geographical maps to:
+ - Policy Advocacy: Support policies that promote salary transparency and equitable pay practices across the tech sector.
 
-            1. Illustrate regional salary distributions and variations.
+ - Education Initiatives: Fund programs that address skill gaps and foster innovation in AI, ML, and data science education.
 
-            2. Compare median salaries across job titles and experience levels.
+ Visualizations
 
-            3. Visualize salary trends over time (2020-2024) and by company size or location.
+ - Utilize visualizations such as bar charts, line graphs, and geographical maps to:
 
- <a href='/' target='_blank'><image src='/' /></a>           
-<a href='/' target='_blank'><image src='/' /></a>
+     1. Illustrate regional salary distributions and variations.
 
-    * Conclusion
+    2. Compare median salaries across job titles and experience levels.
 
-        - This report provides comprehensive insights into salary trends in AI, ML, and data science fields, offering practical recommendations for companies, employees, and policymakers to enhance pay practices and foster a competitive industry landscape. By leveraging these insights, stakeholders can navigate salary negotiations, talent acquisition, and policy development effectively in the evolving tech industry.
+    3. Visualize salary trends over time (2020-2024) and by company size or location.
+
+<a href='/images/Job salary Dashboard 1.png' target='_blank'><image src='/images/Job salary Dashboard 1.png' /></a> 
+
+<a href='/images/job salary dashboard 2.png' target='_blank'><image src='/images/job salary dashboard 2.png' /></a>
+
+# Conclusion
+
+ This report provides comprehensive insights into salary trends in AI, ML, and data science fields, offering practical recommendations for companies, employees, and policymakers to enhance pay practices and foster a competitive industry landscape. By leveraging these insights, stakeholders can navigate salary negotiations, talent acquisition, and policy development effectively in the evolving tech industry.
+
+ # References 
+
+ - <https://www.kaggle.com/datasets/aijobs/global-salaries-in-ai-ml-data-science>
