@@ -1,6 +1,6 @@
 ---
 title: "Data science job salary analysis"
-excerpt: "<img src='/images/500x300.png'>"
+excerpt: "<img src='/images/data science profile.png'>"
 collection: portfolio
 ---
 # Project Goal 
@@ -354,6 +354,6 @@ For Policymakers:
 
  This report provides comprehensive insights into salary trends in AI, ML, and data science fields, offering practical recommendations for companies, employees, and policymakers to enhance pay practices and foster a competitive industry landscape. By leveraging these insights, stakeholders can navigate salary negotiations, talent acquisition, and policy development effectively in the evolving tech industry.
 
- # References 
+ # Reference 
 
  - <https://www.kaggle.com/datasets/aijobs/global-salaries-in-ai-ml-data-science>
