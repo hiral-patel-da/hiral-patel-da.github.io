@@ -26,9 +26,19 @@ Findings
 
 - Mortality Patterns: Variations in mortality rates indicate differing impacts of COVID-19 on healthcare systems and public health measures across countries.
 
+<a href='/images/Continent-death.png' target='_blank'><image src='/images/Continent-death.png' /></a>
+<a href='/images/countries-death.png' target='_blank'><image src='/images/countries-death.png' /></a>
+
 - Infection Spread: Analysis of infection rates reveals countries with higher percentages of their population affected by COVID-19, highlighting areas of intense transmission.
 
+<a href='/images/Countries-infection.png' target='_blank'><image src='/images/Countries-infection.png' /></a>
+
+
 - Vaccination Progress: Insights into vaccination rates show varying levels of immunization coverage, reflecting the effectiveness of vaccination campaigns and healthcare infrastructure.
+
+<a href='/images/people-vaccinated.png' target='_blank'><image src='/images/people-vaccinated.png' /></a>
+<a href='/images/total-population-vs-vaccination.png' target='_blank'><image src='/images/total-population-vs-vaccination.png' /></a>
+
 
 Solution
 ====
