@@ -7,10 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-# Hiral Patel
-
-Bachelors in Psychology and an aspiring Data Analyst.
-
 # About Me
 
 I am a Bachelor of Psychology graduate with a strong passion for data analysis and a knack for statistical methods, research, and data manipulation. Proficient in tools such as Tableau, SQL, and Excel, I excel in transforming raw data into meaningful insights and compelling visualizations.
