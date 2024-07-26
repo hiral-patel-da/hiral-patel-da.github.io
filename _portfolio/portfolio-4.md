@@ -1,5 +1,5 @@
 ---
-title: " AirBNB Data Visualization in Tableau Public "
+title: " AirBNB Data Visualization in Tableau "
 excerpt: "<img src='/images/portfolio-4.png'>"
 collection: portfolio
 ---
@@ -30,26 +30,7 @@ The live dashboard can be viewed at the following link: <https://public.tableau.
 
     * Determine the distribution and popularity of different types of accommodations (number of bedrooms) to understand market demand and host preferences.
 
-Findings
-====
-
-1. Pricing Dynamics:
-
-    * Larger properties with more bedrooms tend to command higher prices, indicating pricing strategies based on capacity and perceived value.
-
-2. Geographic Analysis:
-
-    * Certain zip codes in Seattle exhibit higher average Airbnb prices, reflecting differences in neighborhood desirability and amenities.
-
-3. Seasonal Revenue Patterns:
-
-    * Prices typically peak during tourist-friendly months (e.g., spring and summer) and holiday seasons (e.g., December), correlating with increased demand.
-
-4. Accommodation Preference:
-
-    * Single-bedroom listings constitute the majority, suggesting a preference for smaller, potentially more affordable accommodations among travelers.
-
-# Solution
+# Approach
 
 ### Data Visualization Approach:
 
@@ -79,6 +60,25 @@ Findings
 
 <a href='/images/Dashboard.png' target='_blank'><image src='/images/Dashboard.png' /></a>
 
+# Findings
+
+1. Pricing Dynamics:
+
+    * Larger properties with more bedrooms tend to command higher prices, indicating pricing strategies based on capacity and perceived value.
+
+2. Geographic Analysis:
+
+    * Certain zip codes in Seattle exhibit higher average Airbnb prices, reflecting differences in neighborhood desirability and amenities.
+
+3. Seasonal Revenue Patterns:
+
+    * Prices typically peak during tourist-friendly months (e.g., spring and summer) and holiday seasons (e.g., December), correlating with increased demand.
+
+4. Accommodation Preference:
+
+    * Single-bedroom listings constitute the majority, suggesting a preference for smaller, potentially more affordable accommodations among travelers.
+
+    
 # Conclusion
 
 Through comprehensive data visualization of the 2016 Seattle Airbnb listings dataset, this project has uncovered valuable insights into pricing dynamics, geographic trends, seasonal revenue patterns, and accommodation preferences. The findings highlight the influence of property size and location on pricing, seasonal fluctuations in demand, and the popularity of smaller accommodations. By leveraging Tableau for interactive dashboards, stakeholders can make informed decisions to optimize pricing strategies and cater to market preferences effectively in Seattle's dynamic hospitality sector.

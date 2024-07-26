@@ -35,6 +35,11 @@ from [Portfolio Project 1]..CovidDeaths
 where location like '%states%'and continent is not null
 order by 1,2
 
+```
+<a href='/images/Mortality rate 1.png' target='_blank'><image src='/images/Mortality rate 1.png' /></a>
+
+```sql
+
 --showing countries with highest death count per population
 
 select location, Max(cast(total_deaths as int)) as totaldeathcount
@@ -43,6 +48,12 @@ from [Portfolio Project 1]..CovidDeaths
 where continent is not null
 group by location 
 order by totaldeathcount desc
+
+```
+
+<a href='/images/Mortality rate 2.png' target='_blank'><image src='/images/Mortality rate 2.png' /></a>
+
+```sql
 
 -- showing continents with highest death count per population
 
@@ -55,8 +66,21 @@ group by location
 order by totaldeathcount desc
 
 ```
+<a href='/images/Mortality rate 3.png' target='_blank'><image src='/images/Mortality rate 3.png' /></a>
 
  Infection Spread: Analysis of infection rates reveals countries with higher percentages of their population affected by COVID-19, highlighting areas of intense transmission.
+
+```sql
+--Looking at total cases vs population
+--Shows what percentage of population got Covid
+
+select location, date, population, total_cases, (total_cases /population)*100 as PercentPopulationInfected
+from [Portfolio Project 1]..CovidDeaths
+where location like '%states%' 
+and continent is not null
+order by 1,2
+```
+<a href='/images/infection rate.png' target='_blank'><image src='/images/infection rate.png' /></a>
 
 ```sql
 -- Looking at countries with highest infection rate compared to Population
@@ -69,6 +93,8 @@ group by location, population, date
 order by PercentPopulationInfected desc
 
 ```
+<a href='/images/highest infection.png' target='_blank'><image src='/images/highest infection.png' /></a>
+
  Vaccination Progress: Insights into vaccination rates show varying levels of immunization coverage, reflecting the effectiveness of vaccination campaigns and healthcare infrastructure.
 
 ```sql
@@ -84,6 +110,11 @@ Join [Portfolio Project 1]..CovidVaccinations vac
 	and dea.date = vac.date
 where dea.continent is not null
 order by 2,3
+
+```
+<a href='/images/vaccination.png' target='_blank'><image src='/images/vaccination.png' /></a>
+
+```sql
 
 -- With CTE 
 
@@ -105,10 +136,12 @@ select *, (rollingpeoplevaccinated/population)*100 percentpopulationvaccinated
 from popvsvac
 
 ```
+<a href='/images/percent population vaccinated.png' target='_blank'><image src='/images/percent population vaccinated.png' /></a>
 
 # Solution
 
 This project involves querying and analyzing data from the "CovidDeaths" and "CovidVaccinations" tables within the COVID-19 database. Utilizing SQL queries, views, and temporary tables, the project aims to store and visualize data for deeper analysis and presentation of findings. By focusing on infection rates, mortality rates, and vaccination progress, this exploration seeks to provide actionable insights for healthcare professionals, policymakers, and researchers to enhance COVID-19 response strategies globally.
+
 
 # References
 

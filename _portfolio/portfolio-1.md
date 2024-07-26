@@ -1,5 +1,5 @@
 ---
-title: "Data science job salary analysis"
+title: "Data science job salary analysis in SQL, Tableau & Excel. "
 excerpt: "<img src='/images/data science profile.png'>"
 collection: portfolio
 ---
