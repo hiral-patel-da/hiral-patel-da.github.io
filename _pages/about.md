@@ -9,7 +9,7 @@ redirect_from:
 
 # About Me
 
-I am a Bachelor of Psychology graduate with a strong passion for data analysis and a knack for statistical methods, research, and data manipulation. Proficient in tools such as Tableau, SQL, and Excel, I excel in transforming raw data into meaningful insights and compelling visualizations.
+I am a Bachelor of Psychology graduate with a strong passion for data analysis and a knack for statistical methods, research, and data manipulation. Proficient in tools such as Tableau, SQL, and Excel, I thrive at converting raw data into valuable insights and engaging visual representations.
 
 My journey in psychology has equipped me with a rigorous approach to research and analysis, emphasizing both quantitative and qualitative methodologies. I am adept at interpreting complex datasets to uncover patterns and trends, which allows me to derive actionable recommendations.
 
