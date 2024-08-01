@@ -9,10 +9,10 @@ redirect_from:
 
 # About Me
 
-I am a Bachelor of Psychology graduate with a strong passion for data analysis and a knack for statistical methods, research, and data manipulation. Proficient in tools such as Tableau, SQL, and Excel, I thrive at converting raw data into valuable insights and engaging visual representations.
+Hello! My name is Hiral Patel, and I am a recent graduate with a Bachelor of Psychology. My interest in understanding patterns and trends has inspired me to explore into data analysis, where I can blend my analytical skills with my curiosity for uncovering insights.
 
-My journey in psychology has equipped me with a rigorous approach to research and analysis, emphasizing both quantitative and qualitative methodologies. I am adept at interpreting complex datasets to uncover patterns and trends, which allows me to derive actionable recommendations.
+Over the past few months, I have dedicated myself to learning essential tools for a Data Analyst role, including Excel, SQL, and Tableau. I have completed several projects that demonstrate my ability to analyze data, visualize findings, and provide actionable insights. You can view these projects on my portfolio website.
 
-Driven by a desire to apply my analytical skills in a dynamic environment, I am eager to transition into a data analyst role where I can leverage my expertise in data visualization and statistical analysis. I thrive in collaborative settings, where my strong communication skills and collaborative mindset enable me to effectively communicate insights and collaborate with diverse teams.
+I am eager to gain hands-on experience and am actively seeking internship opportunities, whether paid or unpaid, to further develop my skills and contribute to a dynamic team. I am enthusiastic about the potential to bring value to an organization through data-driven decision-making.
 
-Currently expanding my knowledge through continuous learning in advanced statistical methods and data science techniques, I am committed to enhancing my capabilities and making a meaningful impact through data-driven decision-making.
+Thank you for visiting my website. Feel free to reach out to me if you have any questions or opportunities.
